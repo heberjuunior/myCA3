@@ -10,7 +10,7 @@
      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
      rel="stylesheet">
    <link rel="stylesheet" href="style.css">
-
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  </head>
 
  <script>
@@ -102,14 +102,14 @@
           Please enter your login details:</p>
         </div>
 
-        
-          <label for="staffPass">Password</label>
-          <input type="text" id="staffPass" placeholder="Insert your Password here"><span>
+         <div class="input-group mb-3">
 
-          <button onclick="validate()" type="button">Login</button>
-          <br><br>
-       
-          </div>
+          <label for="staffPass"></label>
+          <input type="text" id="staffPass" class="form-control" aria-describedby="button-addon2" placeholder="Insert your Password here">
+          
+          <button onclick="validate()" type="button"  id="button-addon2" class="btn btn-outline-secondary">Login</button>
+          
+         </div>
   </section>
 
  </body>
