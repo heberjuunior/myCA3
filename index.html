@@ -13,6 +13,24 @@
 
  </head>
 
+ <script>
+   function validate(){
+     //access the value inside text box with id="staffPass"
+      var staffInput = document.getElementById('staffPass').value;
+
+      // REGEX password validation
+      var regx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!-\/:-@\[-`{-~]).{8,}$/;
+
+      if (regx.test(staffInput)){
+        alert("Welcome to your Account!")
+      }
+      else {
+        alert("Invalid Password: Make sure it contains at least one character in lowercase, one uppercase, a digit and a special character, being at least 8 characters long.")
+      }
+   }
+
+ </script>
+
  <body>
    <section class="bg-light text-center">
      <div class="container container--narrow">
@@ -79,20 +97,19 @@
    <section>
     <div class="container">
       <h2 class="text-center">Staff Access</h2>
-      <div class="split">
-        <div>
-          <p>BBBB ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
-            nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
+              <div>
+          <p>Part of our Team?<br>
+          Please enter your login details:</p>
         </div>
-        <div>
-          <p>CCCCC ipsum dolor sit amet consecetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
-            nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
-        </div>
-        <div>
-          <p>DDDD quisquam deleniti</p>
-        </div>
-      </div>
-    </div>
+
+        
+          <label for="staffPass">Password</label>
+          <input type="text" id="staffPass" placeholder="Insert your Password here"><span>
+
+          <button onclick="validate()" type="button">Login</button>
+          <br><br>
+       
+          </div>
   </section>
 
  </body>
