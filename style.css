@@ -20,7 +20,7 @@
     font-weight: 400;
     font-size: 1.3125rem;
     line-height: 1.6;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(216, 216, 216);
     
     
   }
@@ -99,11 +99,12 @@
   .bg-light {
       background-image: url("https://images.unsplash.com/photo-1615540732559-882b276c6786?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
     background-position: cover;
+    background-repeat:unset;
     }
   
   .bg-primary {
-    color: var(--clr-neutral-100);
-    background-color: rgb(29, 44, 44);
+    color:rgb(255, 255, 255);
+    background-color: rgb(172, 116, 14);
   }
   
   .bg-dark {

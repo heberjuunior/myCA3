@@ -12,8 +12,7 @@
    <link rel="stylesheet" href="style.css">
    <script src="script.js"></script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
+
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Home</a>
@@ -44,77 +43,8 @@
    </section>
 
    <section>
-    <div class="container">
-      <h2 class="text-center">Staff Access</h2>
-              <div>
-          <p>Part of our Team?<br>
-          Please enter your Password:</p>
-        </div>
-
-         <div class="input-group mb-3">
-
-          <label for="staffPass"></label>
-          <input type="text" id="staffPass" class="form-control" aria-describedby="button-addon2" placeholder="Insert your Password here">
-          
-          <button onclick="validate()" type="button"  id="button-addon2" class="btn btn-primary">Login</button>
-
-         </div>
-         
-          <label class="alert alert-danger" role="alert" id="inValid" style="visibility: hidden";>Invalid Password - Make sure it meets the minimum requirements!</label><br>
-
-          <label id="Valid" class="alert alert-success" role="alert" style="visibility: hidden";>Hi, Saveur Staff Member! Welcome to your account!</label>
-  </section>
-
-  <section class="bg-dark">
-    <div class="container">
-      
-           <div>
-          <h2>Costumers Worldwide!</h2><br>
-          <div>
-            <form id="myForm">
-              <input type="number" id="number" placeholder="Number of Photos"required>
-              <input type="submit" value="List Users">
-            </form>
-            <div id="results"></div>
-          </div>
-
-          <ul class="pagination"></ul>
-        </div>
-        
-<button id="getUsers">Get User</button>
-
-
-<script>
-document.getElementById('getUsers').addEventListener('click', getUsers)
-
-function getUsers(){
-  fetch("https://randomuser.me/api/?results=5")
-.then((res) => res.json())
-.then((data) => {
- let output = '<h2>Users</h2>';  
- data.forEach(user){
-   output +=
-   `
-   <div>
-   <h3>${results.name}</h3>
-   <ul>
-     <li> ${results.location.street.country}</li>
-     <li> ${results.picture.medium}</li>
-     <li> ${results.gender}</li>    
-   </ul>
-   </div>
-    `;
- });
- document.getElementById('output').innerHTML = output;}
-</script>
-    
-    </div>
-  </section>
-
-
-   <section>
      <div class="container">
-       <h2 class="text-center">Saveur Menu Options</h2>
+       <h2 class="text-center">Quality Designs</h2>
        <div class="split">
          <div>
            <p>BBBB ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
@@ -133,7 +63,24 @@ function getUsers(){
      </div>
    </section>
 
-   
+   <section class="bg-dark">
+     <div class="container">
+       <div class="split">
+         <div>
+           <img src="images/main.jpg" alt="presented dish">
+         </div>
+         <div>
+           <h2>Delicious dishes</h2><br>
+           <p>From light and delightful salads to tender and flavoursome salmon: we have you covered!</p><br>
+           <p>Request our complete menu and be amazed with our absolutely stunning dishes!</p>
+         </div>
+         <div>
+           <img src="images/salmon.jpg" alt="salmon dish">
+         </div>
+       </div>
+     </div>
+   </section>
+
    <section class="bg-primary">
      <div class="container">
        <div class="split">
@@ -141,7 +88,7 @@ function getUsers(){
            <img src="images/drink.jpg" alt="drink image">
          </div>
          <div>
-           <h2>Bill Breakdown</h2><br>
+           <h2>Variety of drinks</h2><br>
            <p>Our drink menu has everything to keep you well refreshed! 
               (and maybe a little tipsy too!)</p><br>
            <ul>Our wide selection of drinks include:
@@ -155,12 +102,3 @@ function getUsers(){
        </div>
      </div>
    </section>
-
-
-
-  <button id="getJSON">Get JSON</button>
-  <div id="output"></div>
-
-
- </body>
- </html>
