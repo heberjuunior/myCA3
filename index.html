@@ -13,37 +13,38 @@
    <script src="script.js"></script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" href="index.html">Home</a>    
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Staff Login</a>
-          </li>
-        
-      </div>
-    </div>
-  </nav>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a href="about.html" class="nav-link active"  href="about.html">About Us</a>
+      </li>        
+          </div>
+        </div>
+      </nav>
 
  </head>
  <body>
 
-   <section class="bg-light text-center">
-     <div class="container container--narrow">
+  <div>
+    <section class="showcase">
+    
+     <video src="images/videocover2.mp4" muted loop autoplay></video>
+     <div class="overlay"></div>
+     <div class="text">
+       <h2>Saveur Restaurant </h2>
+       <h3>Where the flavour is</h3> 
        
-       <h1>SAVEUR RESTAURANT</h1>
      </div>
-   </section>
+       </section>
+  
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-   <section>
+   
+
+   <section id="staff">
     <div class="container">
       <h2 class="text-center">Staff Access</h2>
               <div>
@@ -82,7 +83,7 @@
         </div>
         
 <button id="getUsers">Get User</button>
-
+<div id="output"></div>
 
 <script>
 document.getElementById('getUsers').addEventListener('click', getUsers)
@@ -92,9 +93,10 @@ function getUsers(){
 .then((res) => res.json())
 .then((data) => {
  let output = '<h2>Users</h2>';  
- data.forEach(user){
-   output +=
-   `
+ console.log(data);
+ data.forEach(function(results){}
+   output +=  `
+
    <div>
    <h3>${results.name}</h3>
    <ul>
@@ -105,7 +107,9 @@ function getUsers(){
    </div>
     `;
  });
- document.getElementById('output').innerHTML = output;}
+ document.getElementById('output').innerHTML = output;
+})
+};
 </script>
     
     </div>
@@ -113,23 +117,175 @@ function getUsers(){
 
 
    <section>
-     <div class="container">
+     <div id="menu" class="container">
        <h2 class="text-center">Saveur Menu Options</h2>
-       <div class="split">
-         <div>
-           <p>BBBB ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
-             nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
-         </div>
-         <div>
-           <p>CCCCC ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
-             nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
-         </div>
-         <div>
-           <p>DDDD quisquam deleniti facere fugit. Vero quidem sunt fuga fugit ea voluptatum placeat ullam eveniet,
-             minima
-             sed veritatis laboriosam. Quia cumque est cupiditate quod eum?</p>
-         </div>
-       </div>
+      
+        
+  <section class="container content-section">
+      <h2 class="section-header">STARTERS</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Tropical Citric Salad </span>
+              <img class="shop-item-image" src="Images/starter1.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€12.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Grillé Toast </span>
+              <img class="shop-item-image" src="Images/starter2.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€10.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Pomegranade Yogurt Salad</span>
+              <img class="shop-item-image" src="Images/starter3.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€14.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+         
+      </div>
+  </section>
+
+ 
+  <section class="container content-section">
+      <h2 class="section-header">MAINS</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Bolognaise Française</span>
+              <img class="shop-item-image" src="Images/main1.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€16.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Le Steak</span>
+              <img class="shop-item-image" src="Images/main2.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€18.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Citric Saumon</span>
+              <img class="shop-item-image" src="Images/main3.jpg">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€19.99⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+         
+      </div>
+  </section>
+
+  
+ 
+  <section class="container content-section">
+      <h2 class="section-header">DESSERTS</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Crème Vanille</span>
+              <img class="shop-item-image" src="Images/dessert1.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€14.59⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Gateau au Chocolat</span>
+              <img class="shop-item-image" src="Images/dessert2.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€13.89⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Blanc Berry Gateau</span>
+              <img class="shop-item-image" src="Images/dessert3.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€16.89⠀</span>
+                  <input type="checkbox"/>
+                  Veg⠀⠀
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+         
+      </div>
+  </section>
+ 
+ 
+  <section class="container content-section">
+      <h2 class="section-header">BEVERAGES</h2>
+      <div class="shop-items">
+          <div class="shop-item">
+              <span class="shop-item-title">Traditional Cappuccino</span>
+              <img class="shop-item-image" src="Images/drink1.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€4.99</span>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Love Potion Cocktail</span>
+              <img class="shop-item-image" src="Images/drink2.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€12.59</span>
+                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+              <span class="shop-item-title">Fizzy Drink</span>
+              <img class="shop-item-image" src="Images/drink3.jfif">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">€3.49 </span> 
+                 
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+               </div>
+          </div>
+        
+          
+
+  <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+          <span class="cart-item cart-header cart-column">DISH</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items">
+      </div>
+      <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">€0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">FINISH ORDER</button>
+  </section>
+
+
+
      </div>
    </section>
 
@@ -141,25 +297,17 @@ function getUsers(){
            <img src="images/drink.jpg" alt="drink image">
          </div>
          <div>
-           <h2>Bill Breakdown</h2><br>
-           <p>Our drink menu has everything to keep you well refreshed! 
-              (and maybe a little tipsy too!)</p><br>
-           <ul>Our wide selection of drinks include:
-             <li> original cocktails;</li>
-             <li> handcraft beers;</li>
-             <li> soft drinks;</li>
-             <li> wide selection of juices!</li>
-             </ul>
-               </p>
+         
+
+
          </div>
        </div>
      </div>
    </section>
 
+  
+  
 
-
-  <button id="getJSON">Get JSON</button>
-  <div id="output"></div>
 
 
  </body>
