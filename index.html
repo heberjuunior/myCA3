@@ -4,47 +4,43 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Saveur Restaurant</title>
+   <title>Saveur Restaurant — Home</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link
      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
      rel="stylesheet">
    <link rel="stylesheet" href="style.css">
-   <script src="script.js"></script>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Home</a>    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a href="about.html" class="nav-link active"  href="about.html">About Us</a>
-      </li>        
-          </div>
-        </div>
-      </nav>
+   
 
  </head>
  <body>
 
-  <div>
-    <section class="showcase">
-    
-     <video src="images/videocover2.mp4" muted loop autoplay></video>
-     <div class="overlay"></div>
-     <div class="text">
-       <h2>Saveur Restaurant </h2>
-       <h3>Where the flavour is</h3> 
-       
-     </div>
-       </section>
+  <!--simple classic Navigation bar fixed to top and stylized-->
   
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <nav class="navbar navbar-light fixed-top" style="background-color: #fd8f00;">
+    <div class="container-fluid">
+     <img src="images/logo-saveur.gif" alt="Saveur" height="40" width="40"> <a class="navbar-brand" href="index.html">⠀Home</a>    
+     <a class="navbar-brand" href="about.html">⠀About Us</a>
+    </div>
+    </nav>
 
-   
+  <!--This block of code goes for the video playing muted and in loop with text on top of it;
+  also an animation is linked to come in action as soon as the page is loaded. -->
+     
+<section class="showcase">
+  <video src="images/videocover2.mp4" muted loop autoplay></video>
+ 
+  <div class="content" class="cta">
+    <h1>Saveur Restaurant</h1><h4>Beyond the boundaries of taste</h4></div>
+   <div class="transition"></div>
+  </section>
 
-   <section id="staff">
+  
+   <section>
+     <!-- Block dedicated to Staff Access and Validation -->
+
     <div class="container">
       <h2 class="text-center">Staff Access</h2>
               <div>
@@ -60,67 +56,33 @@
           <button onclick="validate()" type="button"  id="button-addon2" class="btn btn-primary">Login</button>
 
          </div>
-         
+          <!--Here it hides the message until a input is given -->
           <label class="alert alert-danger" role="alert" id="inValid" style="visibility: hidden";>Invalid Password - Make sure it meets the minimum requirements!</label><br>
 
           <label id="Valid" class="alert alert-success" role="alert" style="visibility: hidden";>Hi, Saveur Staff Member! Welcome to your account!</label>
   </section>
 
+ 
+
   <section class="bg-dark">
-    <div class="container">
-      
-           <div>
-          <h2>Costumers Worldwide!</h2><br>
-          <div>
-            <form id="myForm">
-              <input type="number" id="number" placeholder="Number of Photos"required>
-              <input type="submit" value="List Users">
-            </form>
-            <div id="results"></div>
-          </div>
-
-          <ul class="pagination"></ul>
-        </div>
-        
-<button id="getUsers">Get User</button>
-<div id="output"></div>
-
-<script>
-document.getElementById('getUsers').addEventListener('click', getUsers)
-
-function getUsers(){
-  fetch("https://randomuser.me/api/?results=5")
-.then((res) => res.json())
-.then((data) => {
- let output = '<h2>Users</h2>';  
- console.log(data);
- data.forEach(function(results){}
-   output +=  `
-
-   <div>
-   <h3>${results.name}</h3>
-   <ul>
-     <li> ${results.location.street.country}</li>
-     <li> ${results.picture.medium}</li>
-     <li> ${results.gender}</li>    
-   </ul>
-   </div>
-    `;
- });
- document.getElementById('output').innerHTML = output;
-})
-};
-</script>
+    <h2 class="text-center">Saveur Customers Worldwide</h2><br>
+       <!--Random User API set as Saveur Customers  -->
+ 
+<div class="col-md-12 text-center">
+  <button class="btn btn-warning"  id="user-button">Check out our Customers!</button>
+  <div id="output"></div>
+</div>
     
-    </div>
+    
   </section>
 
+   <!--Here starts the menu options, first the user selects what they want and in the bottom a list is displayed -->
 
-   <section>
-     <div id="menu" class="container">
+   <section id="menu">
+     <div class="container">
        <h2 class="text-center">Saveur Menu Options</h2>
       
-        
+        <!-- 3 Starter Options -->
   <section class="container content-section">
       <h2 class="section-header">STARTERS</h2>
       <div class="shop-items">
@@ -159,7 +121,7 @@ function getUsers(){
       </div>
   </section>
 
- 
+ <!-- 3 Main Options -->
   <section class="container content-section">
       <h2 class="section-header">MAINS</h2>
       <div class="shop-items">
@@ -198,7 +160,7 @@ function getUsers(){
   </section>
 
   
- 
+ <!-- 3 Dessert Options -->
   <section class="container content-section">
       <h2 class="section-header">DESSERTS</h2>
       <div class="shop-items">
@@ -236,7 +198,7 @@ function getUsers(){
       </div>
   </section>
  
- 
+ <!-- 3 Beverage Options -->
   <section class="container content-section">
       <h2 class="section-header">BEVERAGES</h2>
       <div class="shop-items">
@@ -267,7 +229,7 @@ function getUsers(){
           </div>
         
           
-
+<!-- This container will get the choices from the user and display with quantity and price. Also gives option to add or remove items always updating the total down below -->
   <section class="container content-section">
       <h2 class="section-header">CART</h2>
       <div class="cart-row">
@@ -281,7 +243,8 @@ function getUsers(){
           <strong class="cart-total-title">Total</strong>
           <span class="cart-total-price">€0</span>
       </div>
-      <button class="btn btn-primary btn-purchase" type="button">FINISH ORDER</button>
+      <!-- Once 'the user is happy with the order' they can finish order and a message will be displayed thanking them and resetting all the selections -->
+      <button class="btn btn-warning btn-purchase col-md-12 text-center" type="button">FINISH ORDER</button>
   </section>
 
 
@@ -290,25 +253,24 @@ function getUsers(){
    </section>
 
    
-   <section class="bg-primary">
+   <section class="bg-light">
      <div class="container">
        <div class="split">
          <div>
-           <img src="images/drink.jpg" alt="drink image">
-         </div>
-         <div>
+           <img src="images/logo-saveur.gif" height="100" width="150" alt="logo">
+          </div>
+         <p> Saveur Restaurant</p><br>
+         <p>Website developed by: Heber Mota 2020317</p>
          
-
-
-         </div>
+        
        </div>
      </div>
    </section>
 
   
-  
+   <!--linking my HTML page to the JS one-->
 
-
+   <script src="script.js"></script >
 
  </body>
  </html>

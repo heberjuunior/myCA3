@@ -1,12 +1,20 @@
+
+
+$( ".cta" ).ready(function() {
+    $( ".transition").toggleClass( "anim-trans");
+  });
+  
+// Code for Password Validation
+
 function validate(){
     //access the value inside text box with id="staffPass"
      var staffInput = document.getElementById('staffPass').value;
 
-     // REGEX password validation
+     // REGEX password validation following specifications
      var regx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!-\/:-@\[-`{-~]).{8,}$/;
 
 
-    //Showing feedback after password input
+    //Showing valid/invalid feedback after password input
      if (regx.test(staffInput)){
        document.getElementById('Valid').style.visibility = "visible";
        document.getElementById('inValid').style.visibility = "hidden";
@@ -18,13 +26,59 @@ function validate(){
   }
 
 
+  //Getting Random Users from API
 
+  // Getting button
+document.getElementById('user-button').addEventListener('click', getData);
+
+function getData() {
+
+    // Fetching API
+    fetch('https://randomuser.me/api/?results=5')
+        .then(res => res.json())
+        .then(data => {
+
+            let author = data.results;
+
+            // Getting data value
+            let output = "<br>";
+
+            // Getting random users data to fill out Name, picture, telephone, email & location 
+            author.forEach(function (lists) {
+                output += `
+                <div class="container">
+                    <div class="card mt-4">
+                        <ul class="list-group">
+                            <li class="list-group-item"><center><h3>Name: ${lists.name.first} ${lists.name.last}</h3></center></li>
+                            <li class="list-group-item"><center><img src="${lists.picture.large}"></center></li>
+                            <li class="list-group-item">Phone Number: ${lists.cell}</li>
+                            <li class="list-group-item">Email: ${lists.email}</li>
+                            <li class="list-group-item">Address: ${lists.location.city}, ${lists.location.country} | Post Code: ${lists.location.postcode}</li>
+                        </ul>
+                    </div>
+                </div> `;
+            });
+
+            // Show all data received in the HTML element
+            document.getElementById('output').innerHTML = output;
+
+        });
+};
+
+
+
+
+  //Here starts the code for the Shopping Cart
+
+
+  //adding event listener to get function started
   if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
+//button to remove items
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {

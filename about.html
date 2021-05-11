@@ -4,50 +4,46 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Saveur Restaurant</title>
+   <title>Saveur Restaurant — About Us</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link
      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
      rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <link rel="stylesheet" href="style.css">
-   <script src="script.js"></script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container-fluid">
-  <a class="navbar-brand" href="index.html">Home</a>    
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  <li class="nav-item">
-    <a href="about.html" class="nav-link active"  href="about.html">About Us</a>
-  </li>        
-      </div>
-    </div>
-  </nav>
 
+   
  </head>
  <body>
 
- <div>
-  <section class="showcase">
-  
-   <video src="images/videocover.mp4" muted loop autoplay></video>
-   <div class="overlay"></div>
-   <div class="text">
-     <h2>Taste the best of Saveur! </h2> 
-     
-   </div>
-     </section>
+   <!--simple classic Navigation bar fixed to top and stylized-->
+   
+  <nav class="navbar navbar-light fixed-top" style="background-color: #fd8f00;">
+    <div class="container-fluid">
+     <img src="images/logo-saveur.gif" alt="Saveur" height="40" width="40"> <a class="navbar-brand" href="index.html">⠀Home</a>    
+     <a class="navbar-brand" href="about.html">⠀About Us</a>
+    </div>
+    </nav>
 
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-     
-  
+    
+  <!--This block of code goes for the video playing muted and in loop with text on top of it;
+  also an animation is linked to come in action as soon as the page is loaded. -->
 
+<section class="showcase" class="container">
+  <video src="images/videocover.mp4" muted loop autoplay></video> 
+   <div class="content" class="cta">
+      <h1>Saveur Restaurant</h1><h4>Beyond the boundaries of taste</h4></div>
+   <div class="transition"></div>
+   </section>
+
+         <!-- Drinks overview section -->
    <section  class="bg-dark">
      <div class="container">
        <div class="split">
-         
+      
          <div>
-          <h2>Variety of drinks</h2><br>
+          <h2>Variety of drinks</h2><br><hr>
           <p>Our drink menu has everything to keep you well refreshed! </p><p>(and maybe a little tipsy too!)</p>
           <ul>Our wide selection of drinks include:
 
@@ -57,25 +53,27 @@
             <li> Wide selection of juices!</li>
             <li> Best quality coffee and teas</li>
             <li>... and much more!</li>
-             </ul>
-           
-              </p>
-        </div>
+             </ul><br><hr></p>
+         </div>
+        <!--linking a gif and quicky adjusting its size-->
          <div>
-           <img src="images/drink.jpg" alt="salmon dish">
+           <img src="images/drink.webp" alt="drink image" height="450" width="330">
          </div>
        </div>
      </div>
-   </section>
+   </section >
 
+
+   <!-- About Saveur and Covid overview section -->
    <section>
     <div class="container">
       <div class="split">
         <div>
-          <img src="images/steak.jpg" alt="drink image">
+          <img src="images/kitchen.bmp" alt="kitchen image" height="400" width="400">
         </div>
         <div>
-          <h2>A little about Saveur</h2><br>
+          <h2>A little about Saveur</h2><br><hr>
+          <!--split class will divide my container into columns making it more pleasant to look at-->
           <div class="split">
             <div>
               <p>Founded in Bordeaux, 1976, Saveur has been constantly working to bring the best for french cuisine and much more. We deliver beautiful flavoursome dishes that will astonish you!</p>
@@ -86,7 +84,7 @@
             <div>
               <p>Please, be advised that with current COVID-19 restrictions we are running lower in seat availability and for this reason we might be with booking availability reduced!</p>
             </div>
-          </div>
+          </div><hr>
               </p>
         </div>
       </div>
@@ -94,29 +92,29 @@
   </section>
 
 
-     <section class="bg-dark">
-      <div class="container">
-        <div class="split">
-          <div>
-            <img src="images/main.jpg" alt="drink image">
-          </div>
-          <div>
-            <h2>Haven't checked our Menu yet?</h2><br>
-            <p><Our drink menu has everything to keep you well refreshed! 
-               (and maybe a little tipsy too!)</p><br>
-               <a href="#menu">Check it now!</a>>
-            <ul>Our wide selection of drinks include:
-              <li> original cocktails;</li>
-              <li> handcraft beers;</li>
-              <li> soft drinks;</li>
-              <li> wide selection of juices!</li>
-              </ul>
-                </p>
-          </div>
+ <!-- Desserts overview section -->
+  <section  class="bg-dark">
+    <div class="container">
+      <div class="split">
+        
+        <div>
+         <h2>Flavoursome desserts</h2><br>
+          <ul>Some of our most popular disserts are:
+           <br><hr>
+           <li> Tropical Apple au Flambé;</li>
+           <li> Gateau au Chocolat</li>
+           <li> Crème Vanille;</li>
+           <li> Blanc Berry Gateau</li>
+          </ul></p><br><hr>
+       </div>
+        <div>
+          <img src="images/dish.gif" alt="drink image">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-
+  <!--linking my HTML page to the JS one-->
+    <script src="script.js"></script >
 
    </body>
