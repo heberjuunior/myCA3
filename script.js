@@ -4,6 +4,7 @@ $( ".cta" ).ready(function() {
     $( ".transition").toggleClass( "anim-trans");
   });
   
+
 // Code for Password Validation
 
 function validate(){
@@ -28,13 +29,10 @@ function validate(){
 
   //Getting Random Users from API
 
-  // Getting button
-document.getElementById('user-button').addEventListener('click', getData);
-
 function getData() {
 
     // Fetching API
-    fetch('https://randomuser.me/api/?results=5')
+    fetch('https://randomuser.me/api/?results=6')
         .then(res => res.json())
         .then(data => {
 
@@ -46,7 +44,7 @@ function getData() {
             // Getting random users data to fill out Name, picture, telephone, email & location 
             author.forEach(function (lists) {
                 output += `
-                <div class="container">
+                <div class="btn" class="container">
                     <div class="card mt-4">
                         <ul class="list-group">
                             <li class="list-group-item"><center><h3>Name: ${lists.name.first} ${lists.name.last}</h3></center></li>
@@ -55,8 +53,8 @@ function getData() {
                             <li class="list-group-item">Email: ${lists.email}</li>
                             <li class="list-group-item">Address: ${lists.location.city}, ${lists.location.country} | Post Code: ${lists.location.postcode}</li>
                         </ul>
-                    </div>
-                </div> `;
+                    </div>⠀⠀
+                </div>⠀⠀<span> `;
             });
 
             // Show all data received in the HTML element
@@ -65,20 +63,18 @@ function getData() {
         });
 };
 
-
-
+window.onload = getData;
 
   //Here starts the code for the Shopping Cart
-
-
   //adding event listener to get function started
+  
   if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
-//button to remove items
+//function to add/remove items from cart
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -101,6 +97,7 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+//Showing a message after the "Finish Order" button is pressed and restarting count
 function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -110,6 +107,7 @@ function purchaseClicked() {
     updateCartTotal()
 }
 
+//removing items and updating the bill
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
@@ -124,6 +122,7 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
+//displaying items selected in a descriptive list with total
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
@@ -134,6 +133,7 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
+//also if user selects the same item twice, an alert will show
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
@@ -141,7 +141,7 @@ function addItemToCart(title, price, imageSrc) {
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
+            alert('This item is already added to the cart, you can change quantity in the list below.')
             return
         }
     }
@@ -161,6 +161,7 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
+//Calculus being done automatically when items are added/removed and showing total
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')

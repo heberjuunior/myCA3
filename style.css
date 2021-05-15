@@ -45,10 +45,7 @@ li {
     margin-bottom: 1em;
   }
   
-  img {
-    display: block;
-    max-width: 100%;
-  }
+  
   
   .text-center {
     text-align: center;
@@ -70,8 +67,18 @@ li {
     color: white;
     font-family: var(--ff-accent);
   }
+  
+  .btn:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.151);
+    }
 
-  * {
+
+  /* Creating animation for video cover*/
+
+   * {
     padding:0;
     margin:0;
   }
@@ -125,6 +132,7 @@ li {
    width:30%;z-index:1; box-shadow: none;}
   }
 
+/* Making content blocks and styling*/
 
   .container {
     margin-inline: auto;
@@ -155,19 +163,8 @@ li {
     max-width: 34rem;
   }
 
-  
- 
-  /*https://www.youtube.com/watch?v=8MgpE2DTTKA*/
 
-
-  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+  /* Code for video cover */
 
 .showcase
 {
@@ -191,7 +188,7 @@ li {
   width: 100%;
   height: 100%;
   background: #0202021c;
-  mix-blend-mode:;
+  
 }
 
 .showcase video
@@ -205,45 +202,7 @@ li {
 
 }
 
-
-nav {
-  display: grid;
-  grid-template-columns: 100% 1fr 1fr 10%;
-  min-height: 10vh;
-  align-items: center;
-  }
-
-
-
-
-.text
-{
-  position:center;
-  z-index: 10;
-  
-}
-
-.text h2
-{
-  font-size: 4em;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-  line-height: 1em;
-  text-align:center;
-  text-transform: uppercase;
-}
-
-.text h3
-{
-  font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.856);
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
-}
-
-
-
+/* The following menu & cart features were created with help of: https://www.youtube.com/watch?v=YeFzkC2awTM*/
 
 
 .shop-item {
@@ -326,6 +285,7 @@ nav {
   border-radius: 10px;
 }
 
+
 .btn-danger {
   color: white;
   background-color: #EB5757;
@@ -379,7 +339,209 @@ nav {
 
 .btn-purchase {
   display: block;
-  margin: 40px auto 80px auto;
+  margin: 40px auto 2px auto;
   font-size: 1.75em;
 }
 
+
+/*Reviews section code built with help of: https://www.youtube.com/watch?v=WXmn9lk1tgk*/
+
+
+.reviews{
+  margin: 2rem auto;
+  display: flex;
+  
+}
+.review{
+  margin: 0 1rem;
+  min-width: 300px;
+  flex: 1;
+}
+
+.head-review{
+  margin: 1.75rem auto;
+  width: 150px;
+  height: 150px;
+}
+
+.imgReview{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.432);
+}
+
+.body-review{
+  background: linear-gradient(#cfcfcf, #727272);
+  padding: 2.5rem;
+  box-shadow: 2px 2px 10px 3px rgb(248, 248, 248);
+}
+.name-review{
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+  margin-bottom: .25rem;
+}
+.place-review{
+  color: red;
+  font-style: italic;
+}
+.rating{
+  color: rgb(253, 180, 42);
+  margin: 1rem 0;
+}
+
+/* Footer*/
+
+
+
+footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 85%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #242424;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+
+}

@@ -5,26 +5,26 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Saveur Restaurant — About Us</title>
+   <!--adding external libraries-->
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link
-     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
-     rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+   rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
  </head>
  <body>
 
-   <!--simple classic Navigation bar fixed to top and stylized-->
-   
-  <nav class="navbar navbar-light fixed-top" style="background-color: #fd8f00;">
-    <div class="container-fluid">
-     <img src="images/logo-saveur.gif" alt="Saveur" height="40" width="40"> <a class="navbar-brand" href="index.html">⠀Home</a>    
-     <a class="navbar-brand" href="about.html">⠀About Us</a>
-    </div>
-    </nav>
+    <!--simple classic Navigation bar fixed to top and stylized-->   
+<nav class="navbar fixed-top" style="background-color: #fd8f00;">
+  <div>
+      <a class="navbar-brand btn" href="index.html">⠀Home</a>    
+      <a class="navbar-brand btn" href="about.html">⠀About Us</a>
+      <a class="navbar-brand btn" target=”_blank” href="https://github.com/heberjuunior/myCA3">⠀Github</a>
+  </div>
+</nav>
 
     
   <!--This block of code goes for the video playing muted and in loop with text on top of it;
@@ -35,53 +35,113 @@
    <div class="content" class="cta">
       <h1>Saveur Restaurant</h1><h4>Beyond the boundaries of taste</h4></div>
    <div class="transition"></div>
-   </section>
+</section>
 
-         <!-- Drinks overview section -->
-   <section  class="bg-dark">
-     <div class="container">
-       <div class="split">
-      
-         <div>
-          <h2>Variety of drinks</h2><br><hr>
-          <p>Our drink menu has everything to keep you well refreshed! </p><p>(and maybe a little tipsy too!)</p>
-          <ul>Our wide selection of drinks include:
+<!--This is a review section, with feedback from customers of Saveur,
+  it was built with help of: https://www.youtube.com/watch?v=WXmn9lk1tgk-->
 
-            <li> Original cocktails;</li>
-            <li> Handcraft beers;</li>
-            <li> Soft drinks;</li>
-            <li> Wide selection of juices!</li>
-            <li> Best quality coffee and teas</li>
-            <li>... and much more!</li>
-             </ul><br><hr></p>
-         </div>
-        <!--linking a gif and quicky adjusting its size-->
-         <div>
-           <img src="images/drink.webp" alt="drink image" height="450" width="330">
-         </div>
+<section class="bg-dark">
+    <div class="container">
+      <center><h1 style="color: rgb(240, 128, 0);">Saveur Lovers</h1></center>
+   <div class="reviews">
+
+    <div class="review">
+       <div class="head-review">
+          <img class="imgReview" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
        </div>
-     </div>
-   </section >
+        <button class="btn"><div class="body-review" >
+          <div class="name-review"><h3>Nathan Morris</h3></div>
+          <div class="place-review">Germany</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star-half"></i>
+          </div>
+          <div class="desc-review"><p>Superb steak! <hr> I immediately fell in love with the place as soon as I stepped in, and also with their steak! Yummy! <br> Highly recommended! </p></div>
+       </div></button>
+    </div>
+    <div class="review">
+       <div class="head-review">
+          <img class="imgReview" src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+       </div>
+       <button class="btn"><div class="body-review">
+          <div class="name-review"><h3>Marie Lamprecht</h3></div>
+          <div class="place-review">Paris</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+          </div>
+          <div class="desc-review"><p>Absolument Extraordinaire!<hr> I am delighted with Saveur! They have a delicious vegetarian menu & the desserts in special hits home for me and it is just priceless! xxx</p></div>
+       </div></button>
+    </div>
+    <div class="review">
+       <div class="head-review">
+          <img class="imgReview" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+       </div>
+       <button class="btn"><div class="body-review">
+          <div class="name-review"><h3>Kevin Tuckson</h3></div>
+          <div class="place-review">New York</div>
+          <div class="rating">
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star"></i>
+             <i class="fas fa-star-half"></i>
+          </div>
+          <div class="desc-review"><p>Damn! My new go-to place!<hr>I can't get over the great time I spent in Saveur! Amazing food, drinks, atmosphere and.. staff! Much love!  Regards from NYC.</p></div>
+       </div></button>
+    </div>    
+    </div>
+    </div>
+    </div>
+</section>
 
+   
+    <!-- Drinks overview section with a video cover + transition -->
+ 
+<section class="showcase" class="container">
+  <video src="images/videodrink.mp4" muted loop autoplay></video>
+   <div class="content" class="cta">             
+    
+      <h2>Variety of drinks</h2><br><hr>
+      <h4>Our drink menu is for all tastes!</h4>
+      <ul>Our wide selection of drinks include:
 
-   <!-- About Saveur and Covid overview section -->
-   <section>
+        <li> Original cocktails;</li>
+        <li> Handcraft beers;</li>
+        <li> Soft drinks;</li>
+        <li> Wide selection of juices!</li>
+        <li> Best quality coffee and teas</li>
+        <li>... and much more!</li>
+          </ul><br><hr></p>
+    </div>
+        
+  <div class="transition"></div>
+ </section >
+
+   <!-- Simple about Saveur and Covid overview section -->
+ <section class="bg-dark">
     <div class="container">
       <div class="split">
         <div>
-          <img src="images/kitchen.bmp" alt="kitchen image" height="400" width="400">
+          <img src="images/kitchen.bmp" alt="chef in kitchen image" height="430" width="400">
         </div>
         <div>
-          <h2>A little about Saveur</h2><br><hr>
+          <h2 style="color: rgb(240, 128, 0);">A little about Saveur</h2><br><hr>
           <!--split class will divide my container into columns making it more pleasant to look at-->
           <div class="split">
-            <div>
+            <div class="btn">
               <p>Founded in Bordeaux, 1976, Saveur has been constantly working to bring the best for french cuisine and much more. We deliver beautiful flavoursome dishes that will astonish you!</p>
             </div>
-            <div>
+            <div class="btn">
               <p>Our new branch in Dublin is open to receive all food lovers! Bear in mind a booking may be necessary and can be made through our telephone 083 123 4567 so you play it safe!</p>
             </div>
-            <div>
+            <div class="btn">
               <p>Please, be advised that with current COVID-19 restrictions we are running lower in seat availability and for this reason we might be with booking availability reduced!</p>
             </div>
           </div><hr>
@@ -93,28 +153,91 @@
 
 
  <!-- Desserts overview section -->
-  <section  class="bg-dark">
+  <section>
     <div class="container">
       <div class="split">
         
         <div>
          <h2>Flavoursome desserts</h2><br>
           <ul>Some of our most popular disserts are:
-           <br><hr>
+           <br>
            <li> Tropical Apple au Flambé;</li>
            <li> Gateau au Chocolat</li>
            <li> Crème Vanille;</li>
            <li> Blanc Berry Gateau</li>
           </ul></p><br><hr>
+         <a class="btn" href="index.html#menu"><h3 style="color: rgb(240, 128, 0);"> Want to know more? <br> Check out our menu options!</h3></a><br>
        </div>
         <div>
-          <img src="images/dish.gif" alt="drink image">
+          <img src="images/dish.gif" alt="drink image" height="400" width="700">
         </div>
       </div>
     </div>
   </section>
 
-  <!--linking my HTML page to the JS one-->
-    <script src="script.js"></script >
 
+  <!--footer-->
+  
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          Saveur Restaurant is a vibrant, elegant and modern restaurant that has French cuisine in its heart -  with a twist, our special touch. All of our dishes have been carefully created to impress your palate and ensure your return. <hr>
+          <div class="social">
+            <a href="https://facebook.com"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://twitter.com"><span class="fab fa-twitter"></span></a>
+            <a href="https://instagram.com"><span class="fab fa-instagram"></span></a>
+            <a href="https://youtube.com"><span class="fab fa-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="text">Dublin, Republic of Ireland</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text">+083-765432100</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope"></span>
+            <span class="text">gosaveur@restaurant.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right box">
+        <h2>Contact us</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text">Message*</div>
+              <input type="text" required>
+            </div>
+            
+              <button  class="btn" style="color: blue;" type="submit">Send</button><br>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <center>
+        <span class="credit">Website developed by Heber Mota - 2020317 | </span>
+        <span class="far fa-copyright"></span><span> Saveur Restaurant  2021 | All rights reserved.</span>
+      </center>
+    </div>
+  </footer>
+
+  <!--linking my HTML page to the JS one-->
+    <script src="script.js"></script>    
    </body>
+   </html>
